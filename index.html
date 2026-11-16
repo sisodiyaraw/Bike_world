@@ -3,122 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bike World's By Official Sagar</title>
+<title>Bike World's | Official Sagar</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ background:#080808;
+ color:white;
+ font-family:Arial,sans-serif;
 }
-
-body {
-  background: #080808;
-  color: white;
-  font-family: Arial, sans-serif;
+header{
+ background:#101010;
+ padding:22px;
+ text-align:center;
+ border-bottom:2px solid #e50914;
 }
-
-header {
-  background: #111;
-  padding: 22px;
-  text-align: center;
-  border-bottom: 2px solid red;
+header h1{color:#e50914;font-size:32px}
+header p{letter-spacing:4px;margin-top:7px}
+nav{
+ display:flex;justify-content:center;
+ flex-wrap:wrap;gap:25px;
+ background:#171717;padding:17px;
+ position:sticky;top:0;z-index:10;
 }
-
-header h1 {
-  color: red;
-  font-size: 30px;
+nav a{color:white;text-decoration:none;font-weight:bold}
+nav a:hover{color:red}
+.hero{
+ min-height:420px;
+ display:flex;flex-direction:column;
+ justify-content:center;align-items:center;
+ text-align:center;padding:30px;
+ background:linear-gradient(#0009,#000b),
+ url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1400')
+ center/cover;
 }
-
-nav {
-  background: #191919;
-  padding: 15px;
-  text-align: center;
+.hero h2{font-size:45px;color:#ff2525}
+.hero p{font-size:19px;margin:18px}
+.btn{
+ display:inline-block;background:#e50914;
+ color:white;padding:13px 25px;
+ border:0;border-radius:5px;
+ text-decoration:none;cursor:pointer;
+ font-weight:bold;
 }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 12px;
-  font-weight: bold;
+section{padding:55px 7%}
+.heading{
+ text-align:center;color:#ff2525;
+ font-size:30px;margin-bottom:30px;
 }
-
-.hero {
-  min-height: 350px;
-  padding: 90px 20px;
-  text-align: center;
-  background: linear-gradient(90deg, #000, #292929, #000);
+.search{
+ display:block;width:100%;max-width:500px;
+ margin:0 auto 35px;padding:15px;
+ border:1px solid #444;border-radius:8px;
+ background:#171717;color:white;font-size:16px;
 }
-
-.hero h2 {
-  font-size: 38px;
-  color: red;
+.bikes{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+ gap:25px;
 }
-
-.hero p {
-  margin: 18px;
-  font-size: 18px;
+.card{
+ background:#171717;border:1px solid #333;
+ border-radius:12px;overflow:hidden;
+ transition:.3s;
 }
-
-button {
-  background: red;
-  color: white;
-  border: none;
-  padding: 12px 22px;
-  border-radius: 5px;
-  cursor: pointer;
+.card:hover{
+ transform:translateY(-7px);
+ border-color:red;
 }
-
-section {
-  padding: 35px 20px;
+.card img{
+ width:100%;height:190px;object-fit:cover;
 }
-
-section h2 {
-  color: red;
-  text-align: center;
-  margin-bottom: 25px;
+.card-content{padding:20px}
+.card h3{color:#ff3030;margin-bottom:12px}
+.card p{color:#bbb;margin-bottom:17px}
+.about{
+ text-align:center;background:#151515;
+ line-height:1.8;
 }
-
-.search {
-  display: block;
-  width: 90%;
-  max-width: 450px;
-  padding: 13px;
-  margin: 20px auto;
-  border-radius: 5px;
-  border: none;
+.about p{max-width:700px;margin:auto;color:#ccc}
+footer{
+ background:#050505;text-align:center;
+ padding:30px;color:#aaa;
+ border-top:2px solid red;
 }
-
-.bikes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-}
-
-.card {
-  background: #181818;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  border: 1px solid #333;
-}
-
-.card h3 {
-  color: red;
-  margin: 12px;
-}
-
-.card p {
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
-footer {
-  background: #151515;
-  padding: 25px;
-  text-align: center;
-  border-top: 2px solid red;
-  color: #aaa;
+@media(max-width:600px){
+ .hero h2{font-size:30px}
+ nav{gap:15px}
+ section{padding:40px 5%}
 }
 </style>
 </head>
@@ -126,110 +99,124 @@ footer {
 <body>
 
 <header>
-  <h1>BIKE WORLD'S</h1>
-  <p>BY OFFICIAL SAGAR</p>
+ <h1>BIKE WORLD'S</h1>
+ <p>BY OFFICIAL SAGAR</p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#sports">Sports Bikes</a>
-  <a href="#normal">Normal Bikes</a>
-  <a href="#about">About</a>
+ <a href="#home">HOME</a>
+ <a href="#sports">SPORTS</a>
+ <a href="#normal">NORMAL</a>
+ <a href="#about">ABOUT</a>
 </nav>
 
 <div class="hero" id="home">
-  <h2>WELCOME TO BIKE WORLD</h2>
-  <p>Explore The World Of Motorcycles</p>
-  <button onclick="document.getElementById('sports').scrollIntoView({behavior:'smooth'})">
-    Explore Bikes
-  </button>
+ <h2>WELCOME TO BIKE WORLD</h2>
+ <p>Explore The World Of Motorcycles</p>
+ <a class="btn" href="#sports">EXPLORE BIKES</a>
 </div>
 
 <section id="sports">
-  <h2>SUPER SPORTS BIKES</h2>
-  <input class="search" id="search" type="text"
-  placeholder="Search your favourite bike..."
-  oninput="searchBikes()">
+ <h2 class="heading">SUPER SPORTS BIKES</h2>
 
-  <div class="bikes">
+ <input class="search" id="search"
+ placeholder="Search your favourite bike..."
+ oninput="searchBikes()">
 
-    <div class="card">
-      <h3>Kawasaki Ninja ZX-10R</h3>
-      <p>Super Sports Motorcycle</p>
-      <button>View Details</button>
-    </div>
+ <div class="bikes">
 
-    <div class="card">
-      <h3>Yamaha R1</h3>
-      <p>Sports Motorcycle</p>
-      <button>View Details</button>
-    </div>
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600" alt="Sports motorcycle">
+ <div class="card-content">
+ <h3>Kawasaki Ninja ZX-10R</h3>
+ <p>Super Sports Motorcycle</p>
+ <button class="btn" onclick="details('Kawasaki Ninja ZX-10R')">Explore</button>
+ </div></div>
 
-    <div class="card">
-      <h3>BMW S1000RR</h3>
-      <p>Premium Sports Motorcycle</p>
-      <button>View Details</button>
-    </div>
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600" alt="Yamaha sports bike">
+ <div class="card-content">
+ <h3>Yamaha R1</h3>
+ <p>Super Sports Motorcycle</p>
+ <button class="btn" onclick="details('Yamaha R1')">Explore</button>
+ </div></div>
 
-    <div class="card">
-      <h3>Suzuki Hayabusa</h3>
-      <p>Superbike</p>
-      <button>View Details</button>
-    </div>
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600" alt="BMW motorcycle">
+ <div class="card-content">
+ <h3>BMW S1000RR</h3>
+ <p>Premium Sports Motorcycle</p>
+ <button class="btn" onclick="details('BMW S1000RR')">Explore</button>
+ </div></div>
 
-  </div>
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1558980394-0c4d0b4c4b7b?w=600" alt="Motorcycle">
+ <div class="card-content">
+ <h3>Suzuki Hayabusa</h3>
+ <p>Superbike</p>
+ <button class="btn" onclick="details('Suzuki Hayabusa')">Explore</button>
+ </div></div>
+
+ </div>
 </section>
 
 <section id="normal">
-  <h2>NORMAL BIKES</h2>
+ <h2 class="heading">NORMAL BIKES</h2>
+ <div class="bikes">
 
-  <div class="bikes">
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600" alt="Hero motorcycle">
+ <div class="card-content">
+ <h3>Hero Super Splendor XTEC</h3>
+ <p>Commuter Motorcycle</p>
+ <button class="btn" onclick="details('Hero Super Splendor XTEC')">Explore</button>
+ </div></div>
 
-    <div class="card">
-      <h3>Hero Super Splendor XTEC</h3>
-      <p>Commuter Motorcycle</p>
-      <button>View Details</button>
-    </div>
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600" alt="Classic motorcycle">
+ <div class="card-content">
+ <h3>Royal Enfield Classic 350</h3>
+ <p>Classic Motorcycle</p>
+ <button class="btn" onclick="details('Royal Enfield Classic 350')">Explore</button>
+ </div></div>
 
-    <div class="card">
-      <h3>Royal Enfield Classic 350</h3>
-      <p>Classic Motorcycle</p>
-      <button>View Details</button>
-    </div>
+ <div class="card">
+ <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600" alt="Honda motorcycle">
+ <div class="card-content">
+ <h3>Honda SP 125</h3>
+ <p>Commuter Motorcycle</p>
+ <button class="btn" onclick="details('Honda SP 125')">Explore</button>
+ </div></div>
 
-    <div class="card">
-      <h3>Honda SP 125</h3>
-      <p>Commuter Motorcycle</p>
-      <button>View Details</button>
-    </div>
-
-  </div>
+ </div>
 </section>
 
-<section id="about">
-  <h2>ABOUT US</h2>
-  <p style="text-align:center;color:#ccc;">
-    Welcome to Bike World's By Official Sagar.
-    Discover motorcycles, explore different brands
-    and enjoy the world of bikes.
-  </p>
+<section class="about" id="about">
+ <h2 class="heading">ABOUT US</h2>
+ <p>
+ Welcome to Bike World's By Official Sagar.
+ Discover sports bikes, superbikes and normal
+ motorcycles. Explore the amazing world of bikes
+ all in one place!
+ </p>
 </section>
 
 <footer>
-  <p>© 2026 Bike World's By Official Sagar</p>
-  <p>Made with passion for motorcycles 🏍️</p>
+ <h3>BIKE WORLD'S BY OFFICIAL SAGAR</h3>
+ <p>Made with passion for motorcycles.</p>
+ <p>© 2026 All Rights Reserved</p>
 </footer>
 
 <script>
-function searchBikes() {
-  let value = document.getElementById("search").value.toLowerCase();
-  let cards = document.querySelectorAll("#sports .card");
+function searchBikes(){
+ let value=document.getElementById("search").value.toLowerCase();
+ document.querySelectorAll(".card").forEach(card=>{
+ card.style.display=card.innerText.toLowerCase().includes(value)?"block":"none";
+ });
+}
 
-  cards.forEach(card => {
-    card.style.display =
-      card.innerText.toLowerCase().includes(value)
-      ? "block" : "none";
-  });
+function details(name){
+ alert("Welcome to Bike World's!\\nBike: "+name+"\\nMore details coming soon!");
 }
 </script>
 
